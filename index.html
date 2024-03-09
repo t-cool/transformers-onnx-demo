@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
   <meta name="author" content="Xenova" />
-  <title>Transformers.js/ONNX Demo</title>
+  <title>Transformers/ONNX Demo</title>
   <meta name="description"
     content="State-of-the-art Machine Learning for the web. Run 🤗 Transformers directly in your browser, with no need for a server!" />
 
@@ -30,10 +30,10 @@
     <section class="py-4 border-bottom" id="demo">
       <div class="container px-5 my-4">
         <div class="mb-2">
-          <h2 class="fw-bolder">Demo</h2>
+          <h2 class="fw-bolder">Transformers/ONNX Demo</h2>
         </div>
         <div class="row justify-content-center">
-          <label>Task: </label>
+          <label>タスク: </label>
           <div class="col-12 mt-1">
             <select id="task" class="form-select">
               <option value="translation" selected>
@@ -443,12 +443,8 @@
           </div>
           
           <div class="col-12 mt-2 d-flex justify-content-center">
-            <button id="generate" type="button" class="btn btn-primary">Generate</button>
+            <button id="generate" type="button" class="btn btn-primary">実行</button>
 
-            <!-- <button class="btn btn-primary" type="button">
-                      <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
-                      <span class="visually-hidden">Loading...</span>
-                    </button> -->
           </div>
 
           <div id="progress" class="col-12 mt-4" style="display: none;">
