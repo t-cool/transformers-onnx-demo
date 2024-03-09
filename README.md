@@ -2,6 +2,6 @@
 
 Transformers.js の Demo です。
 
-## ライセンス
+## Copyright
 
 Xenova
