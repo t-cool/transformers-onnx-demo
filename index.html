@@ -36,48 +36,48 @@
           <label>タスク: </label>
           <div class="col-12 mt-1">
             <select id="task" class="form-select">
-              <option value="translation" selected>
-                Translation w/ t5-small (78 MB)
+              <option value="question-answering">
+                質問への回答 w/ distilbert-base-uncased-distilled-squad (66 MB)
               </option>
               <option value="text-generation">
-                Text generation w/ distilgpt2 (85 MB)
-              </option>
-              <option value="masked-language-modelling">
-                Masked language modelling w/ bert-base-cased (110 MB)
-              </option>
-              <option value="sequence-classification">
-                Text classification w/ bert-base-multilingual-uncased-sentiment (169 MB)
-              </option>
-              <option value="token-classification">
-                Token classification w/ Davlan/bert-base-multilingual-cased-ner-hrl (178 MB)
-              </option>
-              <option value="zero-shot-classification">
-                Zero-shot classification w/ typeform/distilbert-base-uncased-mnli (68 MB)
-              </option>
-              <option value="question-answering">
-                Question answering w/ distilbert-base-uncased-distilled-squad (66 MB)
+                テキスト生成 w/ distilgpt2 (85 MB)
               </option>
               <option value="summarization">
-                Summarization w/ distilbart-cnn-6-6 (284 MB)
+                要約 w/ distilbart-cnn-6-6 (284 MB)
+              </option>
+              <option value="translation" selected>
+                翻訳 w/ t5-small (78 MB)
+              </option>
+              <option value="masked-language-modelling">
+                マスクされた言語モデリング w/ bert-base-cased (110 MB)
+              </option>
+              <option value="sequence-classification">
+                テキストの分類 w/ bert-base-multilingual-uncased-sentiment (169 MB)
+              </option>
+              <option value="token-classification">
+                トークンの分類 w/ Davlan/bert-base-multilingual-cased-ner-hrl (178 MB)
+              </option>
+              <option value="zero-shot-classification">
+                ゼロショット分類 w/ typeform/distilbert-base-uncased-mnli (68 MB)
               </option>
               <option value="code-completion">
-                Code completion w/ Salesforce/codegen-350M-mono (369 MB)
+                コードの補完 w/ Salesforce/codegen-350M-mono (369 MB)
               </option>
               <option value="automatic-speech-recognition">
-                Speech to text w/ whisper-tiny.en (41 MB)
+                音声からテキストへの変換 w/ whisper-tiny.en (41 MB)
               </option>
               <option value="image-to-text">
-                Image to text w/ vit-gpt2-image-captioning (246 MB)
+                画像をテキストに変換 w/ vit-gpt2-image-captioning (246 MB)
               </option>
               <option value="image-classification">
-                Image classification w/ google/vit-base-patch16-224 (88 MB)
+                画像の分類 w/ google/vit-base-patch16-224 (88 MB)
               </option>
               <option value="zero-shot-image-classification">
-                Zero-shot image classification w/ openai/clip-vit-base-patch16 (151 MB)
+                ゼロショット画像分類 w/ openai/clip-vit-base-patch16 (151 MB)
               </option>
               <!-- TODO: add image-segmentation demo -->
               <option value="object-detection">
-                Object detection w/ facebook/detr-resnet-50 (43 MB)
+                物体検出 w/ facebook/detr-resnet-50 (43 MB)
               </option>
             </select>
           </div>
@@ -87,15 +87,15 @@
             <div class="d-flex">
               <div style="width: calc(50% - 20px);">
                 <select id="language-from" class="form-select mt-1 col-3">
-                  <option value="en" selected>English</option>
+                  <option value="en" selected>英語</option>
                 </select>
               </div>
               <div style="width: 40px;" class="d-flex justify-content-center align-items-center">to</div>
               <div style="width: calc(50% - 20px);">
                 <select id="language-to" class="form-select mt-1 col-3">
-                  <option value="fr" selected>French</option>
-                  <option value="de">German</option>
-                  <option value="ro">Romanian</option>
+                  <option value="fr" selected>フランス語</option>
+                  <option value="de">ドイツ語</option>
+                  <option value="ro">ルーマニア語</option>
                 </select>
               </div>
             </div>
@@ -149,14 +149,14 @@
                   <label class="input-group-text" for="sample-select">Sample</label>
                   <select param-name="do_sample" datatype="bool" class="form-select generation-option"
                     id="sample-select">
-                    <option value="true">Yes</option>
-                    <option value="false" selected>No</option>
+                    <option value="true">はい</option>
+                    <option value="false" selected>いいえ</option>
                   </select>
                 </div>
               </div>
               <div class="task-settings col-xl-2 col-md-4 col-sm-6" task="zero-shot-classification">
                 <div class="input-group mb-2" title="Allow multiple true classes">
-                  <label class="input-group-text" for="multi-label-select">Multi label</label>
+                  <label class="input-group-text" for="multi-label-select">マルチ・ラベル</label>
                   <select param-name="multi_label" datatype="bool" class="form-select generation-option"
                     id="multi-label-select">
                     <option value="true">Yes</option>
@@ -285,9 +285,9 @@
 
               <div class="col-lg-6">
                 <select id="audio-select" class="form-select">
-                  <option value="./audio/jfk.wav">Example 1</option>
-                  <option value="./audio/ted.wav">Example 2</option>
-                  <option value="./audio/ted_60.wav">Example 3</option>
+                  <option value="./audio/jfk.wav">例 1</option>
+                  <option value="./audio/ted.wav">例 2</option>
+                  <option value="./audio/ted_60.wav">例 3</option>
                   <option show-custom>Custom</option>
                 </select>
 
@@ -312,13 +312,13 @@
                 <label>Image: </label>
                 <select id="image-select" class="form-select">
                   <option value="./images/football-match.jpg">
-                    Example 1
+                    例 1
                   </option>
                   <option value="./images/airport.jpg">
-                    Example 2
+                    例 2
                   </option>
                   <option value="./images/savanna.jpg">
-                    Example 3
+                    例 3
                   </option>
                   <option show-custom>Custom</option>
                 </select>
@@ -341,13 +341,13 @@
                 <label>Image: </label>
                 <select id="ic-select" class="form-select">
                   <option value="./images/tiger.jpg">
-                    Example 1
+                    例 1
                   </option>
                   <option value="./images/teapot.jpg">
-                    Example 2
+                    例 2
                   </option>
                   <option value="./images/palace.jpg">
-                    Example 3
+                    例 3
                   </option>
                   <option show-custom>Custom</option>
                 </select>
@@ -373,13 +373,13 @@
 
                 <select id="zsic-select" class="form-select">
                   <option value="./images/football-match.jpg">
-                    Example 1
+                    例 1
                   </option>
                   <option value="./images/airport.jpg">
-                    Example 2
+                    例 2
                   </option>
                   <option value="./images/savanna.jpg">
-                    Example 3
+                    例 3
                   </option>
                   <option show-custom>Custom</option>
                 </select>
@@ -406,19 +406,19 @@
           <div task="object-detection" class="task-settings">
             <div class="row pt-2">
               <div class="col-lg-6">
-                <label>Image: </label>
+                <label>画像: </label>
                 <select id="od-select" class="form-select">
                   <option value="./images/cats.jpg">
-                    Example 1
+                    例 1
                   </option>
                   <option value="./images/football-match.jpg">
-                    Example 2
+                    例 2
                   </option>
                   <option value="./images/airport.jpg">
-                    Example 3
+                    例 3
                   </option>
                   <option value="./images/savanna.jpg">
-                    Example 4
+                    例 4
                   </option>
                   <option show-custom>Custom</option>
                 </select>
@@ -449,7 +449,7 @@
 
           <div id="progress" class="col-12 mt-4" style="display: none;">
             <div class="d-flex align-items-center position-relative py-2">
-              <div><strong>Loading model files...</strong> (only run once)</div>
+              <div><strong>モデルをブラウザのキャッシュに読み込んでいます...</strong> (初回のみダウンロードの時間がかかります)</div>
               <div class="spinner-border position-absolute" role="status" aria-hidden="true" style="right: 0">
               </div>
             </div>
